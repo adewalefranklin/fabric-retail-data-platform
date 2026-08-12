@@ -331,6 +331,16 @@ Additional pipeline documentation is available here:
 
 ---
 
+## Data Lineage
+
+Microsoft Fabric lineage view provides end-to-end visibility into the dependencies between the ingestion, transformation and storage components of the platform.
+
+![Microsoft Fabric Data Lineage](images/data_lineage.png)
+
+The lineage captures the flow from the REST API source through Fabric ingestion, Bronze, Silver and Gold Lakehouses, PySpark transformation notebooks and downstream analytical components.
+
+---
+
 ## Power BI
 
 Power BI Desktop consumes the Fabric Gold layer through OneLake.
