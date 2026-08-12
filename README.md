@@ -334,6 +334,7 @@ Additional pipeline documentation is available here:
 ## Data Lineage
 
 Microsoft Fabric lineage view provides end-to-end visibility into the dependencies between the ingestion, transformation, storage and orchestration components of the platform.
+
 ![Microsoft Fabric Data Lineage](images/data_lineage.png)
 
 The lineage captures the flow from the REST API source through Fabric ingestion, Bronze, Silver and Gold Lakehouses, PySpark transformation notebooks and downstream analytical components.
