@@ -1,0 +1,11 @@
+Source changes
+      ↓
+Incremental ingestion
+      ↓
+Watermark / CDC
+      ↓
+Delta MERGE
+      ↓
+Changed Silver records
+      ↓
+Affected Gold models
