@@ -24,35 +24,49 @@ Silver-to-Gold Notebook
    │
    ▼
 Gold Lakehouse
+```
 
-# Activities
-1. Copy Job
+## Activities
+
+### 1. Copy Job
 
 Ingests retail product data from the REST API into the Bronze layer of the Fabric Lakehouse.
 
-2. Bronze-to-Silver
+### 2. Bronze-to-Silver
 
-Executes the PySpark transformation notebook responsible for schema validation, data-quality checks, flattening semi-structured data, cleaning and transforming the Bronze data into the Silver layer.
+Executes the PySpark transformation notebook responsible for:
 
-3. Silver-to-Gold
+- Schema validation
+- Data-quality checks
+- Flattening semi-structured data
+- Data cleaning and transformation
+- Writing curated data into the Silver Lakehouse
 
-Executes the PySpark transformation notebook responsible for producing analytics-ready Gold tables used for downstream reporting and analysis.
+### 3. Silver-to-Gold
 
-Orchestration
+Executes the PySpark transformation notebook responsible for transforming curated Silver data into analytics-ready Gold tables used for downstream reporting and analysis.
 
-### The activities are connected using success dependencies:
+## Orchestration
 
+The activities are connected using success dependencies:
+
+```text
 Copy Job
-    ↓ success
+    │
+    ▼ success
 Bronze-to-Silver
-    ↓ success
+    │
+    ▼ success
 Silver-to-Gold
-The above activities ensure that downstream transformations execute only after the preceding processing stage completes successfully.
+```
 
-# Fabric Export
+This ensures that downstream transformations execute only after the preceding processing stage completes successfully.
 
-pl_retail_ingestion.zip contains the pipeline exported directly from Microsoft Fabric and can be used as the pipeline artifact for this project.
+## Fabric Export
 
+`pl_retail_ingestion.zip` contains the pipeline exported directly from Microsoft Fabric and represents the deployable pipeline artifact for this project.
+
+## Repository Structure
 
 ```text
 fabric-retail-data-platform/
@@ -72,6 +86,4 @@ fabric-retail-data-platform/
 │
 └── images/
     └── ...
-
-
-
+```
